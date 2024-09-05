@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC EXEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">home</a></li>
+                <li><a href="#downloads" onclick="showSection('downloads')">downloads</a></li>
+                <li><a href="#shop" onclick="showSection('shop')">shop</a></li>
+                <li><a href="#home" onclick="openLink('https://discord.gg/aNgxzbTDSG')">discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <h1>#1 JP EXEC</h1>
+            <p>Providing the latest Roblox cheats and scripts with top-notch execution.</p>
+        </section>
+
+        <section id="downloads" class="section" style="display: none;">
+            <h2>Downloads</h2>
+            <p>Download the tools you need to get started.</p>
+            <a class="download-btn" href="bootstrapper_link">Bootstrapper DL</a>
+            <a class="download-btn" href="zip_link">Zip DL</a>
+        </section>
+
+        <section id="shop" class="section" style="display: none;">
+            <h2>Shop</h2>
+            <div class="shop-item">
+                <h3>gc exec lifetime</h3>
+                <p>Get unlimited access to gc exec with a lifetime license.</p>
+                <a class="buy-btn" href="#shop" onclick="openLink('https://discord.gg/aNgxzbTDSG')">BUY</a>
+                <br>
+            </div>
+            <h2>Payment Method</h2>
+            <li>robux</li>
+            <li>steam giftcard</li>
+            <h2>price is in server</h2>
+        </section>
+
+        <section id="discord" class="section" style="display: none;">
+            <h2>Discord</h2>
+            <p>Join our Discord server for updates and community discussions.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JP EXEC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            var selectedSection = document.getElementById(id);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
